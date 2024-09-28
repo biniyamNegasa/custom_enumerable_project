@@ -59,6 +59,13 @@ module Enumerable
     end
     lst
   end
+
+  def my_inject(curr = 0)
+    my_each do |elm|
+      curr = yield(curr, elm)
+    end
+    curr
+  end
 end
 
 # You will first have to define my_each
