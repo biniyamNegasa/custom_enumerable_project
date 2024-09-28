@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Enumerabel method
 module Enumerable
   # Your code goes here
 end
@@ -8,4 +11,13 @@ end
 # to this method
 class Array
   # Define my_each here
+  def my_each
+    length = self.length
+    start = 0
+    until start == length
+      yield self[start]
+      start += 1
+    end
+    self
+  end
 end
