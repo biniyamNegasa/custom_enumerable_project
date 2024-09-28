@@ -20,6 +20,13 @@ module Enumerable
     end
     filtered
   end
+
+  def my_all?
+    my_each do |elm|
+      return false unless yield(elm)
+    end
+    true
+  end
 end
 
 # You will first have to define my_each
