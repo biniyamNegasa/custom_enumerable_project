@@ -27,6 +27,13 @@ module Enumerable
     end
     true
   end
+
+  def my_any?
+    my_each do |elm|
+      return true if yield(elm)
+    end
+    false
+  end
 end
 
 # You will first have to define my_each
